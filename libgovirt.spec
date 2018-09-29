@@ -15,7 +15,7 @@ Source0: http://ftp.gnome.org/pub/GNOME/sources/libgovirt/0.3/%{name}-%{version}
 Source1: http://ftp.gnome.org/pub/GNOME/sources/libgovirt/0.3/%{name}-%{version}.tar.xz.sign
 #Source2: cfergeau-29AC6C82.keyring
 URL: http://people.freedesktop.org/~teuf/govirt/
-BuildRequires: glib2-devel
+BuildRequires: pkgconfig(glib-2.0)
 BuildRequires: intltool
 BuildRequires: rest-devel >= 0.7.92
 %if %{with_gir}
