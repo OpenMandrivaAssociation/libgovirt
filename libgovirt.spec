@@ -13,7 +13,7 @@ License: LGPLv2+
 Group: Development/C
 Source0: http://ftp.gnome.org/pub/GNOME/sources/libgovirt/0.3/%{name}-%{version}.tar.xz
 Source1: http://ftp.gnome.org/pub/GNOME/sources/libgovirt/0.3/%{name}-%{version}.tar.xz.sign
-Source2: cfergeau-29AC6C82.keyring
+#Source2: cfergeau-29AC6C82.keyring
 URL: http://people.freedesktop.org/~teuf/govirt/
 BuildRequires: glib2-devel
 BuildRequires: intltool
@@ -57,7 +57,7 @@ parameters needed to make a SPICE/VNC connection to them.
 Libraries, includes, etc. to compile with the libgovirt library
 
 %prep
-gpgv2 --quiet --keyring %{SOURCE2} %{SOURCE1} %{SOURCE0}
+gpgv2 --quiet --keyring %{SOURCE1} %{SOURCE0}
 %setup -q
 
 %build
