@@ -47,7 +47,7 @@ Summary: Libraries, includes, etc. to compile with the libgovirt library
 Group: Development/C
 Requires: %{libname} = %{version}-%{release}
 Requires: pkgconfig
-Requires: glib2-devel
+Requires: pkgconfig(glib-2.0)
 
 %description -n %devname
 libgovirt is a library that allows applications to use oVirt REST API
