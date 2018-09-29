@@ -57,7 +57,7 @@ parameters needed to make a SPICE/VNC connection to them.
 Libraries, includes, etc. to compile with the libgovirt library
 
 %prep
-gpgv2 --quiet --keyring %{SOURCE1} %{SOURCE0}
+#gpgv2 --quiet --keyring %{SOURCE1} %{SOURCE0}
 %setup -q
 
 %build
