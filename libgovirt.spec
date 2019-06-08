@@ -7,7 +7,7 @@
 
 Summary: A GObject library for interacting with oVirt REST API
 Name: libgovirt
-Version: 0.3.4
+Version: 0.3.6
 Release: 1
 License: LGPLv2+
 Group: Development/C
