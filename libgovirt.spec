@@ -7,13 +7,11 @@
 
 Summary: A GObject library for interacting with oVirt REST API
 Name: libgovirt
-Version: 0.3.6
+Version: 0.3.7
 Release: 1
 License: LGPLv2+
 Group: Development/C
 Source0: http://ftp.gnome.org/pub/GNOME/sources/libgovirt/0.3/%{name}-%{version}.tar.xz
-Source1: http://ftp.gnome.org/pub/GNOME/sources/libgovirt/0.3/%{name}-%{version}.tar.xz.sign
-#Source2: cfergeau-29AC6C82.keyring
 URL: http://people.freedesktop.org/~teuf/govirt/
 BuildRequires: pkgconfig(glib-2.0)
 BuildRequires: intltool
@@ -67,7 +65,7 @@ Libraries, includes, etc. to compile with the libgovirt library
 %global gir_arg --enable-introspection=no
 %endif
 
-%configure2_5x %{gir_arg}
+%configure %{gir_arg}
 %make_build V=1
 
 %install
