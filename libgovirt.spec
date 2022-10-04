@@ -60,7 +60,7 @@ Libraries, includes, etc. to compile with the libgovirt library
 
 %build
 %meson
-%meson_builf
+%meson_build
 
 %install
 %meson_install
