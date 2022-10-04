@@ -13,6 +13,8 @@ License: LGPLv2+
 Group: Development/C
 Source0: http://ftp.gnome.org/pub/GNOME/sources/libgovirt/0.3/%{name}-%{version}.tar.xz
 URL: http://people.freedesktop.org/~teuf/govirt/
+Patch0: https://gitlab.gnome.org/GNOME/libgovirt/-/commit/bae26c0033d649722b5a3fc48df3adf2172490f1.patch
+
 BuildRequires: pkgconfig(glib-2.0)
 BuildRequires: meson
 BuildRequires: pkgconfig(rest-1.0)
