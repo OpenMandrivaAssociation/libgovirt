@@ -7,15 +7,17 @@
 
 Summary: A GObject library for interacting with oVirt REST API
 Name: libgovirt
-Version: 0.3.8
-Release: 5
+Version: 0.3.9
+Release: 1
 License: LGPLv2+
 Group: Development/C
 Source0: http://ftp.gnome.org/pub/GNOME/sources/libgovirt/0.3/%{name}-%{version}.tar.xz
 URL: http://people.freedesktop.org/~teuf/govirt/
+Patch0: https://gitlab.gnome.org/GNOME/libgovirt/-/commit/bae26c0033d649722b5a3fc48df3adf2172490f1.patch
+
 BuildRequires: pkgconfig(glib-2.0)
-BuildRequires: intltool
-BuildRequires: pkgconfig(rest-0.7)
+BuildRequires: meson
+BuildRequires: pkgconfig(rest-1.0)
 %if %{with_gir}
 BuildRequires: gobject-introspection-devel
 %endif
@@ -59,25 +61,19 @@ Libraries, includes, etc. to compile with the libgovirt library
 %setup -q
 
 %build
-%if %{with_gir}
-%global gir_arg --enable-introspection=yes
-%else
-%global gir_arg --enable-introspection=no
-%endif
-
-%configure %{gir_arg}
-%make_build V=1
+export CC=gcc
+export CXX=g++
+%meson
+%meson_build
 
 %install
-%make_install
+%meson_install
+
 rm -f %{buildroot}%{_libdir}/*.a
 rm -f %{buildroot}%{_libdir}/*.la
-%find_lang %{name} --with-gnome
+%find_lang govirt-1.0 --with-gnome
 
-%check
-make check || :
-
-%files -f %{name}.lang
+%files -f govirt-1.0.lang
 %doc AUTHORS COPYING MAINTAINERS README
 
 %files -n %{libname}
