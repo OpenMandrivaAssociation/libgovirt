@@ -71,9 +71,9 @@ export CXX=g++
 
 rm -f %{buildroot}%{_libdir}/*.a
 rm -f %{buildroot}%{_libdir}/*.la
-%find_lang %{name} --with-gnome
-
-%files -f %{name}.lang
+#find_lang %{name} --with-gnome
+#-f %{name}.lang
+%files 
 %doc AUTHORS COPYING MAINTAINERS README
 
 %files -n %{libname}
