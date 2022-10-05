@@ -61,6 +61,8 @@ Libraries, includes, etc. to compile with the libgovirt library
 %setup -q
 
 %build
+export CC=gcc
+export CXX=g++
 %meson
 %meson_build
 
