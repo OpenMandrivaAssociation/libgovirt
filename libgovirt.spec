@@ -71,9 +71,9 @@ export CXX=g++
 
 rm -f %{buildroot}%{_libdir}/*.a
 rm -f %{buildroot}%{_libdir}/*.la
-%find_lang %{govirt} --with-gnome
+%find_lang govirt-1.0 --with-gnome
 
-%files -f %{govirt}.lang
+%files -f govirt-1.0.lang
 %doc AUTHORS COPYING MAINTAINERS README
 
 %files -n %{libname}
