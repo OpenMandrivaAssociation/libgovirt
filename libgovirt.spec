@@ -17,6 +17,7 @@ Patch0: https://gitlab.gnome.org/GNOME/libgovirt/-/commit/bae26c0033d649722b5a3f
 
 BuildRequires: pkgconfig(glib-2.0)
 BuildRequires: meson
+BuildRequires: gettext
 BuildRequires: pkgconfig(rest-1.0)
 %if %{with_gir}
 BuildRequires: gobject-introspection-devel
