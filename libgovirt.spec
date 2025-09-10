@@ -8,7 +8,7 @@
 Summary: A GObject library for interacting with oVirt REST API
 Name: libgovirt
 Version: 0.3.9
-Release: 7
+Release: 8
 License: LGPLv2+
 Group: Development/C
 Source0: https://ftp.gnome.org/pub/GNOME/sources/libgovirt/0.3/%{name}-%{version}.tar.xz
