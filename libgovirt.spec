@@ -13,7 +13,6 @@ License: LGPLv2+
 Group: Development/C
 Source0: https://ftp.gnome.org/pub/GNOME/sources/libgovirt/0.3/%{name}-%{version}.tar.xz
 URL: https://people.freedesktop.org/~teuf/govirt/
-Patch0: https://gitlab.gnome.org/GNOME/libgovirt/-/commit/bae26c0033d649722b5a3fc48df3adf2172490f1.patch
 
 BuildRequires: pkgconfig(glib-2.0)
 BuildRequires: meson
@@ -72,9 +71,9 @@ export CXX=g++
 
 rm -f %{buildroot}%{_libdir}/*.a
 rm -f %{buildroot}%{_libdir}/*.la
-%find_lang govirt-1.0 --with-gnome
+%find_lang %{name} --with-gnome
 
-%files -f govirt-1.0.lang
+%files -f %{name}.lang
 %doc AUTHORS COPYING MAINTAINERS README
 
 %files -n %{libname}
